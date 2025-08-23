@@ -1,0 +1,217 @@
+.embla {
+   max-width: 120%;
+   /* width: 100%; */
+   margin: auto;
+   --slide-height: 80%;
+   --slide-spacing: 1rem;
+   --slide-size: 50%;
+   color: aliceblue;
+}
+.embla__viewport {
+   overflow: hidden;
+   width: 100%;
+}
+.embla__container {
+   display: flex;
+   /* touch-action: pan-y pinch-zoom; */
+   margin-left: calc(var(--slide-spacing) * -1);
+   width: 100%;
+}
+.embla__slide {
+   margin-top: 20px;
+   margin-right: 4px;
+   transform: translate3d(0, 0, 0);
+   flex: 0 0 var(--slide-size);
+   /* flex: 0 0 33.333%; large screen */
+   min-width: 0;
+   padding-left: var(--slide-spacing);
+}
+@media (max-width: 1024px) {
+   .embla__slide {
+      flex: 0 0 50%; /* medium screen */
+   }
+}
+@media (max-width: 640px) {
+   .embla__slide {
+      flex: 0 0 100%; /* small screen */
+   }
+}
+.embla__slide__img,
+.embla__parallax__img {
+   border-radius: 1.8rem;
+   display: block;
+   width: 900px; /* Fixed width */
+   height: 450px; /* Fixed height */
+   object-fit: contain; /* Show full image without cropping */
+   /* background: #fff; */
+}
+.embla__controls {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 0.4rem;
+   margin-top: 1.8rem;
+   position: relative;
+}
+.embla__buttons {
+   display: flex;
+   flex-direction: row;
+   gap: 0.6rem;
+   align-items: center;
+   justify-content: flex-start;
+   margin-top: 0.1rem;
+   margin-left: 7.5rem;
+}
+.embla__button {
+   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+   -webkit-appearance: none;
+   appearance: none;
+   background-color: transparent;
+   touch-action: manipulation;
+   display: inline-flex;
+   text-decoration: none;
+   cursor: pointer;
+   border: 0;
+   padding: 0;
+   margin: 0;
+   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+   width: 128px;
+   height: 48px;
+   z-index: 1;
+   border-radius: 50%;
+   color: var(--text-body);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 1;
+}
+.embla__button:disabled {
+   color: #ccc;
+   opacity: 0.5;
+   /* pointer-events: none; */
+   /* Ensure the button is visible but faded */
+}
+.embla__button__svg {
+   width: 35%;
+   height: 35%;
+}
+.embla__dots {
+   position: static;
+   margin: 0 0 0 54rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   align-items: center;
+   z-index: 2;
+}
+.embla__dot {
+   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+   -webkit-appearance: none;
+   appearance: none;
+   background-color: transparent;
+   touch-action: manipulation;
+   display: inline-flex;
+   text-decoration: none;
+   cursor: pointer;
+   border: 0;
+   padding: 0;
+   margin: 0;
+   width: 2.6rem;
+   height: 2.6rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+}
+.embla__dot:after {
+   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+   width: 1.4rem;
+   height: 1.4rem;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   content: "";
+}
+.embla__dot--selected:after {
+   box-shadow: inset 0 0 0 0.2rem var(--text-body);
+}
+.embla__parallax {
+   border-radius: 1.8rem;
+   height: 100%;
+   overflow: hidden;
+}
+.embla__parallax__layer {
+   position: relative;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+.embla__parallax__img {
+   max-width: none;
+   flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
+   object-fit: cover;
+}
+@media (max-width: 900px) {
+   .embla__slide__img,
+   .embla__parallax__img {
+      width: 100vw;
+      height: 220px;
+      max-width: 100vw;
+      object-fit: contain;
+   }
+   .embla__controls {
+      margin-top: 1rem;
+   }
+   .embla__buttons {
+      margin-left: 2rem;
+   }
+   .embla__dots {
+      margin-left: 0;
+   }
+}
+@media (max-width: 600px) {
+   .embla__slide__img,
+   .embla__parallax__img {
+      width: 100vw;
+      height: 120px;
+      max-width: 100vw;
+      object-fit: contain;
+   }
+   .embla__controls {
+      flex-direction: column;
+      gap: 0.2rem;
+      margin-top: 0.5rem;
+   }
+   .embla__buttons {
+      margin-left: 0.5rem;
+      gap: 0.2rem;
+   }
+   .embla__dots {
+      margin-left: 0;
+      margin-top: 0.5rem;
+   }
+}
+@media (max-width: 400px) {
+   .embla__slide__img,
+   .embla__parallax__img {
+      width: 100vw;
+      height: 64px;
+      max-width: 100vw;
+      object-fit: contain;
+   }
+   .embla__controls {
+      flex-direction: column;
+      gap: 0.1rem;
+      margin-top: 0.2rem;
+   }
+   .embla__buttons {
+      margin-left: 0.2rem;
+      gap: 0.1rem;
+   }
+   .embla__dots {
+      margin-left: 0;
+      margin-top: 0.2rem;
+   }
+}

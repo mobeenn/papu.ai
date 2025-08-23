@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+.wrapper {
+   display: flex;
+   justify-content: center;
+}
+.scene {
+   width: 260px;
+   height: 200px;
+   perspective: 1000px;
+   position: relative;
+}
+.scene .carousel.keen-slider {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   overflow: visible;
+   transform: translateZ(-288px);
+   transform-style: preserve-3d;
+}
+.carousel__cell {
+   position: absolute;
+   width: 240px;
+   left: 10px;
+   height: 200px;
+   border: 1px solid rgba(0, 0, 0, 0.3);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 50px;
+   color: #fff;
+   font-weight: 500;
+   max-height: 100vh;
+}
+.number-slide1 {
+   background: linear-gradient(
+      128deg,
+      rgba(64, 175, 255, 1) 0%,
+      rgba(63, 97, 255, 1) 100%
+   );
+}
+.number-slide2 {
+   background: linear-gradient(
+      128deg,
+      rgba(255, 154, 63, 1) 0%,
+      rgba(255, 75, 64, 1) 100%
+   );
+}
+.number-slide3 {
+   background: linear-gradient(
+      128deg,
+      rgba(189, 255, 83, 1) 0%,
+      rgba(43, 250, 82, 1) 100%
+   );
+}
+.number-slide4 {
+   background: linear-gradient(
+      128deg,
+      rgba(64, 255, 242, 1) 0%,
+      rgba(63, 188, 255, 1) 100%
+   );
+}
+.number-slide5 {
+   background: linear-gradient(
+      128deg,
+      rgba(255, 64, 156, 1) 0%,
+      rgba(255, 63, 63, 1) 100%
+   );
+}
+.number-slide6 {
+   background: linear-gradient(
+      128deg,
+      rgba(64, 76, 255, 1) 0%,
+      rgba(174, 63, 255, 1) 100%
+   );
+}
+@media (max-width: 900px) {
+   .scene {
+      width: 180px;
+      height: 120px;
+   }
+   .carousel__cell {
+      width: 140px;
+      height: 120px;
+      left: 0;
+      font-size: 28px;
+   }
+}
+@media (max-width: 600px) {
+   .scene {
+      width: 120px;
+      height: 80px;
+   }
+   .carousel__cell {
+      width: 80px;
+      height: 70px;
+      left: 0;
+      font-size: 16px;
+   }
+}
+@media (max-width: 400px) {
+   .scene {
+      width: 80px;
+      height: 48px;
+   }
+   .carousel__cell {
+      width: 48px;
+      height: 40px;
+      left: 0;
+      font-size: 10px;
+   }
+}
+
+:root {
+   --background-color: #ffffff;
+   --text-color: #000000;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+   --background-color: #333333;
+   --text-color: #ffffff;
+}
+
+.light-theme {
+   background-color: #fff;
+   color: #000;
+}
+
+.dark-theme {
+   background-color: #000;
+   color: #fff;
+}
+
+/* Carousel 3D Styles */
+.wrapper {
+   display: flex;
+   justify-content: center;
+}
+.scene {
+   width: 200px;
+   height: 300px;
+   perspective: 1000px;
+   position: relative;
+}
+.scene .carousel.keen-slider {
+   width: 200px;
+   height: 300px;
+   position: absolute;
+   overflow: visible;
+   transform: translateZ(-288px);
+   transform-style: preserve-3d;
+}
+.carousel__cell {
+   position: absolute;
+   width: 200px;
+   left: 0;
+   height: 300px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 50px;
+   color: #fff;
+   font-weight: 500;
+   max-height: 100vh;
+}
+.number-slide1 {
+   background: linear-gradient(
+      128deg,
+      rgba(64, 175, 255, 1) 0%,
+      rgba(63, 97, 255, 1) 100%
+   );
+}
+.number-slide2 {
+   background: linear-gradient(
+      128deg,
+      rgba(255, 154, 63, 1) 0%,
+      rgba(255, 75, 64, 1) 100%
+   );
+}
+.number-slide3 {
+   background: linear-gradient(
+      128deg,
+      rgba(189, 255, 83, 1) 0%,
+      rgba(43, 250, 82, 1) 100%
+   );
+}
+.number-slide4 {
+   background: linear-gradient(
+      128deg,
+      rgba(64, 255, 242, 1) 0%,
+      rgba(63, 188, 255, 1) 100%
+   );
+}
+.number-slide5 {
+   background: linear-gradient(
+      128deg,
+      rgba(255, 64, 156, 1) 0%,
+      rgba(255, 63, 63, 1) 100%
+   );
+}
+.number-slide6 {
+   background: linear-gradient(
+      128deg,
+      rgba(64, 76, 255, 1) 0%,
+      rgba(174, 63, 255, 1) 100%
+   );
+}
+
+.who-will-speak-section {
+   width: 1440px;
+   height: 100px;
+   position: absolute;
+   top: 3448px;
+   left: 0;
+   opacity: 1;
+   background: #d9d9d93d; /* Transparent gray */
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-size: 40px;
+   line-height: 100%;
+   letter-spacing: 0;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 16px;
+}
+.speak-orange {
+   color: #ff7a01;
+}
+.you-blue {
+   color: #22c5a8;
+}
+
+.bg-plan-month {
+   background: radial-gradient(53.57% 50% at 50% 50%, #0d2e35 0%, #0a171b 100%);
+}
+.bg-plan-yearly {
+   background: radial-gradient(53.57% 50% at 50% 50%, #351f0d 0%, #1b120a 100%);
+}
+
+/* scroll bar */
+.scrollbar-hide::-webkit-scrollbar {
+   width: 0;
+   height: 0;
+}
+
+.hover\:scrollbar-default:hover::-webkit-scrollbar {
+   width: 1px;
+}
+
+.hover\:scrollbar-default:hover::-webkit-scrollbar-thumb {
+   background-color: rgba(255, 255, 255, 0.4);
+   border-radius: 6px;
+}
+
+.hover\:scrollbar-default:hover::-webkit-scrollbar-track {
+   background: transparent;
+}
+
+/* color for tetmonial carousel dots */
+.slick-dots li button:before {
+   color: white !important; /* dots ka color white */
+   font-size: 12px;
+}
+.slick-dots li.slick-active button:before {
+   color: white !important; /* active dot bhi white */
+}
